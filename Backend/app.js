@@ -9,10 +9,11 @@ import userRouter from "./router/userRouter.js"
 import messageRouter from "./router/messageRouter.js"
 import appointmentRouter from "./router/appointmentRouter.js"
 
+config();
+
 const app = express();
 
 
-config({ path: "./config/config.env" })
 
 app.use(cors(
     {

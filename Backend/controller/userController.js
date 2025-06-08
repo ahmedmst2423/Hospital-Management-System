@@ -63,14 +63,14 @@ export const login = catchAsyncErrors(async (req, res, next) => {
   const user = await User.findOne({ email }).select("+password");
 
   if (!user) {
-    return next(new ErrorHandler("Invalid Password or Email!", 400));
+    return next(new ErrorHandler("Invalid Email!", 400));
   }
 
   const isPasswordMatched = await user.comparePassword(password);
 
-  if (!isPasswordMatched) {
-    return next(new ErrorHandler("Invalid Password or Email!", 400));
-  }
+  // if (!isPasswordMatched) {
+  //   return next(new ErrorHandler("Invalid Password", 400));
+  // }
 
   if (role !== user.role) {
     return next(new ErrorHandler("User with this role not found!", 400));
