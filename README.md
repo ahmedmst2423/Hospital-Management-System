@@ -1,18 +1,23 @@
-
-
 # Hospital Management System - Full Stack Project
 
 This project is a comprehensive **Hospital Management System** featuring a responsive design for both administrators and patients. It includes a backend service and two separate frontend implementations for managing hospital operations and patient interactions.
 
+## Screenshot
+
+![alt text](images/screenshot-1.png)
+![alt text](images/screenshot-2.png)
+
 ## Features
 
-### [Admin Panel:](https://lifecare-administration.netlify.app)
+### Admin Panel
+
 - **Doctor Management**: Register and manage doctor profiles.
 - **Admin Management**: Add new administrators.
 - **Appointment Management**: View, approve, or reject patient appointments.
 - **Patient Messages**: Read and respond to patient messages.
 
-### [Patient Portal:](https://lifecare-hospitals.netlify.app)
+### Patient Portal
+
 - **Registration and Login**: Patients can register and log in.
 - **Appointment Booking**: Schedule appointments with doctors, including patient details and date.
 - **Message Sending**: Send messages to the admin.
@@ -27,14 +32,18 @@ The project is organized into the following main folders:
 - **Frontend-Patient**: The responsive frontend for patients.
 
 ### Backend
+
 The backend is built using Node.js and Express, and it includes:
+
 - **Dependencies**: `bcrypt`, `cloudinary`, `cookie-parser`, `cors`, `dotenv`, `express`, `express-fileupload`, `jsonwebtoken`, `mongoose`, `validator`.
 - **Features**: Error handling, input validation, token generation, and user schemas.
 
 ### Frontend - Admin
+
 The admin panel is built with React.js and provides a responsive interface for managing hospital operations.
 
 ### Frontend - Patient
+
 The patient portal is also built with React.js, offering a responsive design for patient interactions.
 
 ## Technologies Used
@@ -57,22 +66,26 @@ To get started with the project, follow these instructions:
 1. **Clone the repository:**
 
    ```bash
-    git clone https://github.com/Fairooz2150/Hospital-Management-System.git
+    git clone https://github.com/ahmedmst2423/Hospital-Management-System.git
    ```
-    - First open Hospital-Management-System folder:
-     ```bash
-     cd Hospital-Management-System
-     ```
+
+   - First open Hospital-Management-System folder:
+
+   ```bash
+   cd Hospital-Management-System
+   ```
 
 2. **Navigate to each folder and install dependencies:**
 
    - For Backend:
+
      ```bash
      cd Backend
      npm install
      ```
 
    - For Frontend-Admin:
+
      ```bash
      cd Frontend-Admin
      npm install
@@ -85,7 +98,6 @@ To get started with the project, follow these instructions:
      ```
 
 ### Running the Application
-
 
 1. **Start the Backend server:**
 
@@ -132,14 +144,3 @@ Ensure you have the following environment variables set in your `.env` file for 
    - Find the `users` collection in your database.
    - Locate the user document with the role of "Patient" that you registered.
    - Update the `role` field from "Patient" to "Admin".
-
-### Contributing
-
-If you'd like to contribute to the project:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Create a new Pull Request.
-
-
