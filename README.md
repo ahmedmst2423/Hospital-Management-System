@@ -35,7 +35,7 @@ The project is organized into the following main folders:
 
 The backend is built using Node.js and Express, and it includes:
 
-- **Dependencies**: `bcrypt`, `cloudinary`, `cookie-parser`, `cors`, `dotenv`, `express`, `express-fileupload`, `jsonwebtoken`, `mongoose`, `validator`.
+- **Dependencies**: `bcrypt`, `cloudinary`, `cookie-parser`, `cors`, `dotenv`, `express`, `express-fileupload`, `jsonwebtoken`, `sequelize`, `validator`.
 - **Features**: Error handling, input validation, token generation, and user schemas.
 
 ### Frontend - Admin
@@ -49,7 +49,7 @@ The patient portal is also built with React.js, offering a responsive design for
 ## Technologies Used
 
 - **Frontend**: React.js, Bootstrap, Axios
-- **Backend**: Node.js, Express, MongoDB, JWT, Bcrypt
+- **Backend**: Node.js, Express, PGSQL, JWT, Bcrypt
 - **Other**: Cloudinary for image uploads, dotenv for environment variables, cookie-parser for handling cookies.
 
 ## Getting Started
@@ -129,7 +129,7 @@ To get started with the project, follow these instructions:
 Ensure you have the following environment variables set in your `.env` file for the backend:
 
 - `PORT`: The port number for the backend server.
-- `MONGO_URI`: The MongoDB connection string.
+- `DB_URI`: The Postgresql connection string.
 - `JWT_SECRET_KEY`: Secret key for JWT.
 - `JWT_EXPIRES`: JWT expiration time.
 - `CLOUDINARY_CLOUD_NAME`: Cloudinary cloud name for image storage.
@@ -140,7 +140,7 @@ Ensure you have the following environment variables set in your `.env` file for 
 
 1. **Register a new patient user** by following the registration process on the Patient Portal.
 2. **Update the user's role** to "Admin" directly in the database:
-   - Open your MongoDB client (e.g., MongoDB Compass or your terminal).
+   - Open your PGSQL client.
    - Find the `users` collection in your database.
    - Locate the user document with the role of "Patient" that you registered.
    - Update the `role` field from "Patient" to "Admin".
